@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Component } from 'react';
 import { Link, Switch, Route, Redirect } from 'react-router-dom';
 import { Container } from 'reactstrap';
-import { CustomHeader, Breadcrumb, Footer } from '../../Components/';
+import { CustomHeader, Footer } from '../../Components/';
 
-import { Home } from '../../Pages/';
+import { Home, Help } from '../../Pages/';
 
 export class NoSideBarLayout extends Component {
   render() {
@@ -15,6 +15,7 @@ export class NoSideBarLayout extends Component {
           <main className="main">
             <Container fluid>
               <Switch>
+                <Route path="/help" name="Help" component={Help}/>
                 <Route path="/" name="Home" component={Home}/>
               </Switch>
             </Container>
